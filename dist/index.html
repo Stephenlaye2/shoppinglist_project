@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Rose:wght@300;700&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dist/css/main.css" />
+
+    <title>Shopping List</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">Shopping List</h1>
+      <form id="form-card">
+        <div class="form-group">
+          <label for="name">Product Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter name..."
+          />
+        </div>
+        <div class="form-group">
+          <label for="category">Category</label>
+          <input
+            type="text"
+            name="category"
+            id="category"
+            placeholder="Enter category..."
+          />
+        </div>
+        <div class="form-group">
+          <label for="price">Price(£)</label>
+          <input
+            type="parseFloat(number)"
+            name="price"
+            id="price"
+            placeholder="Enter price..."
+          />
+        </div>
+
+        <div class="submit-form">
+          <input type="submit" value="Add To List" id="submit-btn" />
+        </div>
+      </form>
+      <h3>List of Products</h3>
+      <table>
+        <thead class="table-head">
+          <tr>
+            <th>Product Name</th>
+            <th>Category</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody id="product-list"></tbody>
+      </table>
+      <div class="result-div">
+        <div>
+          <label class="total-product-label" for="count">Total Product</label>
+          <input type="number" name="count" id="total-product" disabled />
+        </div>
+
+        <div>
+          <label class="total-price-label" for="result">Total Price</label>
+          <input id="total-price" name="result" disabled />
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 800px"></div>
+
+    <script src="shopping_list.js"></script>
+  </body>
+</html>
