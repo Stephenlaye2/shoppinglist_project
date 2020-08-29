@@ -181,15 +181,15 @@ document.querySelector("#product-list").addEventListener("click", function (e) {
     // Use the text of the first child of the targeted children elements
     Store.removeProduct(firstChildren[0].textContent);
 
-    let c = e.target.parentElement.parentElement.children[2].textContent;
-//     const actualPrice = parseFloat(c[2].textContent);
+    var productPrice = e.target.parentElement.parentElement.children[2].textContent;
+    
 
     Store.calculatePrice();
     Store.countProduct();
 
     // Call showAlert method
     ui.showAlert(
-      `${e.target.parentElement.parentElement.firstElementChild.textContent}: £${c} successfully removed`,
+      `${e.target.parentElement.parentElement.firstElementChild.textContent}: ${productPrice} successfully removed`,
       "success"
     );
   }
